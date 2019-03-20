@@ -1,5 +1,7 @@
   
 flows:
+  default:
+  - onPush
   onPush:
   - log: "${event.author} pushed ${event.commitId} to ${event.project}/${event.repository}"
                       
