@@ -1,3 +1,11 @@
 flows:
   default:
-  - log: "Hello Concord User"
+  - log: "Flow starts"
+  - form: myForm
+  - log: "Hello, ${myForm.fullName}"
+  
+forms:
+  myForm:
+  - fullName: { label: "Name", type: "string", pattern: ".* .*", readonly: true, placeholder: "Place name here" }
+
+  
